@@ -476,3 +476,6 @@ ul.st-text-block {
 
 .st-format-btn--Unlink {
   text-decoration: line-through; }
+
+.st-format-btn--Strikethrough {
+  text-decoration: line-through; }
