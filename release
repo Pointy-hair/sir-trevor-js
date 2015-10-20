@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FROM_BRANCH=master
+FROM_BRANCH=fifthweek-master
 TO_BRANCH=dist
 ORIGIN_REMOTE=origin
 
