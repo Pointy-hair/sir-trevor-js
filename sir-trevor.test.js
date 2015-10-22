@@ -16969,7 +16969,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Blocks = __webpack_require__(211);
 
 	var BLOCK_OPTION_KEYS = ['convertToMarkdown', 'convertFromMarkdown',
-	  'formatBar', 'textFormatting'];
+	  'formatBar', 'textFormatting', 'custom'];
 
 	var BlockManager = function(options, editorInstance, mediator) {
 	  this.options = options;
@@ -19125,6 +19125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.options = Object.assign({}, config.defaults.formatBar, options || {});
 	  this.commands = null;
 	  this.mediator = mediator;
+	  this.isShown = false;
 
 	  this._ensureElement();
 	  this._bindFunctions();
@@ -19152,12 +19153,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  hide: function() {
+	    this.isShown = false;
+
 	    this.$el.removeClass('st-format-bar--is-ready');
 	    this.$el.remove();
 	  },
 
 	  show: function() {
-	    this.hide();
+	    if(this.isShown){
+	      return;
+	    }
+
+	    this.isShown = true;
 
 	    this.editor.$outer.append(this.$el);
 	    this.$el.addClass('st-format-bar--is-ready');
