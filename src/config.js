@@ -33,6 +33,7 @@ module.exports = {
 
   defaults: {
     defaultType: false,
+    ignoreFormEvents: false,
     spinner: {
       className: 'st-spinner',
       lines: 9,
