@@ -61,7 +61,9 @@ Object.assign(Editor.prototype, require('./function-bind'), require('./events'),
 
     this.build();
 
-    FormEvents.bindFormSubmit(this.$form);
+    if(!this.options.ignoreFormEvents){
+      FormEvents.bindFormSubmit(this.$form);
+    }
   },
 
   /*

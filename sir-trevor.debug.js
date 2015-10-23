@@ -2387,6 +2387,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  defaults: {
 	    defaultType: false,
+	    ignoreFormEvents: false,
 	    spinner: {
 	      className: 'st-spinner',
 	      lines: 9,
@@ -19329,7 +19330,9 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	    this.build();
 
-	    FormEvents.bindFormSubmit(this.$form);
+	    if(!this.options.ignoreFormEvents){
+	      FormEvents.bindFormSubmit(this.$form);
+	    }
 	  },
 
 	  /*
