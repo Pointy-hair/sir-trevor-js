@@ -90,6 +90,16 @@ Concatenates scripts, compiles the Sass, runs the Jasmine tests and minifies the
 
 Please ensure any pull requests have relevant Jasmine tests (where applicable).
 
+## Releasing for Fifthweek
+
+The `master` branch should not be modified directly. It should be kept in sync with the madebymany ST repository.
+
+Changes for release should end up in `fifthweek-master`.
+
+To release, run `./release build v5.x.x`, then `./release push v5.0.7`.  Fifthweek builds start from v5.
+
+Finally update Fifthweek with `bower update sir-trevor-js`.
+
 ## License
 
 Sir Trevor is released under the MIT license:
