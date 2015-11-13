@@ -11,9 +11,7 @@
     "BrowserRunner.html"
   ],
   "main": [
-    "sir-trevor.js",
-    "sir-trevor.css",
-    "sir-trevor-icons.css"
+    "sir-trevor.js"
   ],
   "dependencies": {
     "es5-shim": "~v4.0.3",
@@ -21,5 +19,5 @@
     "Eventable": "~1.0.1",
     "jquery": "~1.9.1"
   },
-  "version": "5.0.6"
+  "version": "5.0.7"
 }
